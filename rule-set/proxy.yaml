@@ -1,0 +1,6 @@
+payload:
+  - '*.glitch.*'
+  - '*.jetbrains.*'
+  - '*.postman.*'
+  - '+.apache.org'
+  - '+.devin.xin'

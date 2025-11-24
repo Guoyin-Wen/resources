@@ -42,20 +42,6 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     interval: 86400
 
-  proxy-glitch:
-    type: http
-    behavior: domain
-    url: "https://guoyin-wen.github.io/resources/rule-set/proxy.yaml"
-    path: ./ruleset/proxy-glitch.yaml
-    interval: 86400
-
-  direct-glitch:
-    type: http
-    behavior: domain
-    url: "https://guoyin-wen.github.io/resources/rule-set/direct.yaml"
-    path: ./ruleset/direct-glitch.yaml
-    interval: 86400
-
   direct:
     type: http
     behavior: domain
@@ -111,14 +97,29 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
+    
+  proxy-custom:
+    type: http
+    behavior: domain
+    url: "https://guoyin-wen.github.io/resources/rule-set/proxy.yaml"
+    path: ./ruleset/proxy-glitch.yaml
+    interval: 86400
+
+  direct-custom:
+    type: http
+    behavior: domain
+    url: "https://guoyin-wen.github.io/resources/rule-set/direct.yaml"
+    path: ./ruleset/direct-glitch.yaml
+    interval: 86400
 
 rules:
-  - RULE-SET,proxy-glitch,PROXY
-  - RULE-SET,direct-glitch,DIRECT
+  - RULE-SET,reject,REJECT
   - RULE-SET,private,DIRECT
   - RULE-SET,applications,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,direct-custom,DIRECT
   - RULE-SET,gfw,PROXY
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,proxy-custom,PROXY
   - RULE-SET,telegramcidr,PROXY
   - MATCH,DIRECT

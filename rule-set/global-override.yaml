@@ -1,4 +1,23 @@
 # Profile Enhancement Merge Template for Clash Verge
+proxy-providers:
+  free-cloud:
+    type: http
+    # 节点文件 p1对应provider1
+    path: ./proxy_provider/free-cloud.yaml
+    # 订阅 链接
+    url: https://995942874.online.alipaycctv.cn/ktff/m3u8/api/video?token=e1da8d4fe6889d6c992a586c2d365467
+    # 自动更新时间 21600(秒) / 3600 = 6小时
+    interval: 21600
+    # 节点名称前缀 p1
+    override:
+      additional-prefix: "fc |"
+  yi-yuan:
+    type: http
+    path: ./proxy_provider/yi-yuan.yaml
+    url: https://s1.byte77.com/api/v1/client/subscribe?token=e59b1d2921f17f82a2d683036a2cc99f
+    interval: 21600
+    override:
+      additional-prefix: "yy |"
 
 profile:
   store-selected: true

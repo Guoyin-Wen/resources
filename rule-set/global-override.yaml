@@ -45,7 +45,48 @@ profile:
   store-selected: true
 
 dns:
+  enable: true
+  listen: '0.0.0.0:53'
+  enhanced-mode: 'fake-ip'
+  fake-ip-range: '198.18.0.1/16'
+  fake-ip-filter-mode: 'whitelist'
+  prefer-h3: true
+  respect-rules: false
+  use-hosts: false
   use-system-hosts: false
+  ipv6: true
+  fake-ip-filter:
+    - 'rule-set:gfw'
+    - 'rule-set:tld-not-cn'
+    - 'rule-set:proxy-custom'
+  default-nameserver:
+    - 'system'
+    - '223.6.6.6'
+    - '8.8.8.8'
+    - '2400:3200::1'
+    - '2001:4860:4860::8888'
+  nameserver:
+    - '8.8.8.8'
+    - 'https://doh.pub/dns-query'
+    - 'https://dns.alidns.com/dns-query'
+  direct-nameserver-follow-policy: false
+  fallback-filter:
+    geoip: true
+    geoip-code: 'CN'
+    ipcidr:
+      - '240.0.0.0/4'
+      - '0.0.0.0/32'
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+  fallback: []
+  proxy-server-nameserver:
+    - 'https://doh.pub/dns-query'
+    - 'https://dns.alidns.com/dns-query'
+    - 'tls://223.5.5.5'
+  direct-nameserver: []
+
 
 rule-providers:
   reject:

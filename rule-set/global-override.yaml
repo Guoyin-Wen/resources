@@ -43,6 +43,8 @@ proxy-groups:
 profile:
   store-selected: true
   store-fake-ip: true
+  geo-auto-update: true
+  geo-update-interval: 24
 
 dns:
   enable: true

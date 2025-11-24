@@ -2,7 +2,7 @@ proxy-providers: []
 proxy-groups:
   - name: PROXY
     type: select
-    proxies: [DIRECT,自动选择]
+    proxies: [DIRECT,自动印尼,自动日本,自动选择]
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     max-failed-times: 5

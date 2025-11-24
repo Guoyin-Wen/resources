@@ -43,6 +43,7 @@ proxy-groups:
 
 profile:
   store-selected: true
+  store-fake-ip: true
 
 dns:
   enable: true

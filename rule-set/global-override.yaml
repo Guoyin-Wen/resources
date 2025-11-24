@@ -111,7 +111,7 @@ rule-providers:
     url: "https://guoyin-wen.github.io/resources/rule-set/direct.yaml"
     path: ./ruleset/direct-glitch.yaml
     interval: 86400
-
+# rule-set:gfw,rule-set:tld-not-cn,rule-set:proxy-custom
 rules:
   - RULE-SET,reject,REJECT
   - RULE-SET,private,DIRECT

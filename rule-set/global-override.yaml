@@ -9,14 +9,14 @@ proxy-groups:
     include-all: true
   - name: 自动选择
     type: url-test
-    proxies: [DIRECT]
+    proxies: []
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     max-failed-times: 5
     include-all: true
   - name: 自动日本
     type: url-test
-    proxies: [DIRECT]
+    proxies: []
     url: "https://www.gstatic.com/generate_204"
     filter: "日本"
     exclude-filter: "20倍"
@@ -25,7 +25,7 @@ proxy-groups:
     include-all: true
   - name: 自动印尼
     type: url-test
-    proxies: [DIRECT]
+    proxies: []
     url: "https://www.gstatic.com/generate_204"
     filter: "印度尼西亚"
     exclude-filter: "20倍"

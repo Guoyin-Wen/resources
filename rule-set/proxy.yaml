@@ -16,3 +16,4 @@ payload:
   - '+.cloudflare.com'
   - cc.deeptoai.com
   - board.zash.run.place
+  - '+.graf.*'

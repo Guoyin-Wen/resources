@@ -20,3 +20,6 @@ payload:
   - '+.graf.*'
   - '+.qdrant.tech'
   - '+.notion.so'
+  - '+.openai.com'
+  - '+.viewsonicglobal.com'
+  - '+.bento.me'
